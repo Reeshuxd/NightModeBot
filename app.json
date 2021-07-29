@@ -1,0 +1,28 @@
+{
+	"name": "NightModeBot",
+	"description": " A Telegram Bot To Prevent Night Spams!",
+	"keywords": [
+		"telegram",
+		"pyrogram",
+		"bot"
+	],
+        "stack": "container",
+	"repository": "https://github.com/Reeshuxd/NightModeBot",
+	"success_url": "https://t.me/DrxChats",
+	"env": {
+		"TOKEN": {
+			"description": "Your Teleram Bot Token ( @BotFather ) ",
+		        "value": ""
+		},
+		"CHAT_ID": {
+		        "description": "Your Telegram Group-ID!",
+		        "value": ""
+		}
+	},
+        "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}

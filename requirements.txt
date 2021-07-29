@@ -1,0 +1,3 @@
+pyrogram
+apscheduler
+TgCrypto
