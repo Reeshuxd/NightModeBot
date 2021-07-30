@@ -17,7 +17,12 @@
 		"CHAT_ID": {
 		        "description": "Your Telegram Group-ID!",
 		        "value": ""
-		}
+		},
+                "TIMEZONE": {
+                        "description": "Your TimeZone!",
+                        "value": "Asia/Kolkata",
+                        "required": false
+                }
 	},
         "formation": {
         "worker": {
