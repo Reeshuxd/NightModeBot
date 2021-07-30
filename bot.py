@@ -9,6 +9,7 @@ logging.basicConfig(level=logging.INFO)
 try:
     CHAT_ID = int(environ["CHAT_ID"])
     TOKEN = environ["TOKEN"]
+    TIMEZONE = environ["TIMEZONE"]
 except Exception as e:
     print("Important Vars are missing\nBot is quitting.....")
     print(f"Error:\n{e}")
@@ -72,11 +73,11 @@ async def start(client, message):
             )
         )
 
-scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
+scheduler = AsyncIOScheduler(timezone=TIMEZONE)
 scheduler.add_job(group_close, trigger="cron", hour=11, minute=59)
 scheduler.start()
 
-scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
+scheduler = AsyncIOScheduler(timezone=TIMEZONE)
 scheduler.add_job(group_open, trigger="cron", hour=5, minute=59)
 scheduler.start()
 
