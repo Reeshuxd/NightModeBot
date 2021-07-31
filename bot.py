@@ -7,7 +7,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ChatPermi
 logging.basicConfig(level=logging.INFO)
 
 try:
-    CHAT_ID = int(environ["CHAT_ID"])
+    CHAT_ID = set(int(i) for i in environ.get("CHAT_ID", "").split())
     TOKEN = environ["TOKEN"]
     TIMEZONE = environ["TIMEZONE"]
 except Exception as e:
