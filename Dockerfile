@@ -3,7 +3,7 @@
 FROM debian:latest
 
 # basic
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y python3-pip
 RUN python3 -m pip install -U pip
 
